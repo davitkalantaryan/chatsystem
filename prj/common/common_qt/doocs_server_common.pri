@@ -8,6 +8,8 @@
 
 message("!!! doocs_server_common.pri:")
 
+QT -= core
+QT -= gui
 LIBS += -lEqServer
 include(../../common/common_qt/doocs_client_common.pri)
 
