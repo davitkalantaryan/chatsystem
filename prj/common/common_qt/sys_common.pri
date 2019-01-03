@@ -50,7 +50,7 @@ message("!!! sys_common.pri: SYSTEM_PATH=$$SYSTEM_PATH")
 # Debug:DESTDIR = debug1
 DESTDIR = $$DEEPNESS/$$SYSTEM_PATH/$$TARGET_PATH
 OBJECTS_DIR = ../../../$$SYSTEM_PATH/.objects
-CONFIG += debug
+#CONFIG += debug
 
 #CONFIG += c++11
 #QMAKE_CXXFLAGS += -std=c++0x

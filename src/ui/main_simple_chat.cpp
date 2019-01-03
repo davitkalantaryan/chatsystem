@@ -3,12 +3,12 @@
 // main_chatsystem.cpp
 
 #include <QApplication>
-#include "common_ui_qt_mainwindow.hpp"
 #include "chatsystem_simple_qtapplication.hpp"
-#include "chatsystem_simple_centralwidget.hpp"
+#include "chatsystem_simple_mainwindow.hpp"
 #include <stdio.h>
 #include <QUrl>
 #include <signal.h>
+#include <string>
 #ifdef ANDROID
 #include <QtWebView/QtWebView>
 #endif
@@ -18,24 +18,29 @@
 #endif
 
 
+extern char* g_pcArgv0;
+char* g_pcArgv0;
+
+
 int main(int argc, char* argv[])
 {
     //freopen( "/dev/null", "w", stderr);
 
+    g_pcArgv0 = argv[0];
+
+    common::socketN::Initialize();
+
     chatsystem::simple::QtApplication myApp(argc, argv);
     qRegisterMetaType<QString>("QString");
     qRegisterMetaType<QUrl>("QUrl");
+    qRegisterMetaType< ::std::string >("::std::string");
     //qRegisterMetaType<omxclient::SDevReturn>("omxclient::SDevReturn");
 
-    common::ui::qt::MainWindow aMain;
-    chatsystem::simple::CentralWidget aWidget;
+    chatsystem::simple::MainWindow aMain;
 
-    //printf("!!!!!!!!!!!!!!!!!!!!! \n");
-
-    aMain.setCentralWidget(&aWidget);
     aMain.show();
+    myApp.execGui();
+    common::socketN::Cleanup();
 
-
-    myApp.exec();
     return 0;
 }

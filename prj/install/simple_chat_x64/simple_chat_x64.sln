@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "simple_chat_x64", "simple_chat_x64.vdproj", "{1450B1AD-39E6-46CD-80BA-D4742DD35F69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1450B1AD-39E6-46CD-80BA-D4742DD35F69}.Debug|Default.ActiveCfg = Debug
+		{1450B1AD-39E6-46CD-80BA-D4742DD35F69}.Debug|Default.Build.0 = Debug
+		{1450B1AD-39E6-46CD-80BA-D4742DD35F69}.Release|Default.ActiveCfg = Release
+		{1450B1AD-39E6-46CD-80BA-D4742DD35F69}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20E34BEC-D245-4BDD-8607-A04234D1D8E2}
+	EndGlobalSection
+EndGlobal

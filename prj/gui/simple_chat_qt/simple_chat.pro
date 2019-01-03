@@ -8,6 +8,8 @@
 #include(../../common/common_qt/sys_common.pri)
 include(../../common/common_qt/gui_with_mainwnd.pri)
 
+#CONFIG += release
+
 greaterThan(QT_MAJOR_VERSION, 4){
 DEFINES += MARGINES_OK
 }else{
@@ -33,8 +35,11 @@ SOURCES += \
     ../../../contrib/cpp-raft/common/common_servertcp.cpp \
     ../../../contrib/cpp-raft/common/common_socketbase.cpp \
     ../../../contrib/cpp-raft/common/common_sockettcp.cpp \
-    ../../../src/ui/chatsystem_simple_centralwidget.cpp
+    ../../../src/ui/chatsystem_simple_centralwidget.cpp \
+    ../../../src/ui/chatsystem_simple_mainwindow.cpp
 
 HEADERS += \
     ../../../src/ui/chatsystem_simple_qtapplication.hpp \
-    ../../../src/ui/chatsystem_simple_centralwidget.hpp
+    ../../../src/ui/chatsystem_simple_centralwidget.hpp \
+    ../../../src/ui/chatsystem_simple_mainwindow.hpp \
+    ../../../contrib/cpp-raft/include/common/common_servertcp.hpp
