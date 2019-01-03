@@ -26,6 +26,7 @@ sys/*/bin/*
 
 #prj/*/*/*
 #prj
+prj/*/build-*
 prj/*/*/Debug
 prj/*/*/Release
 prj/*/*/DebugDbg
