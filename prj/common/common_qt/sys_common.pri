@@ -35,6 +35,7 @@ win32{
     CODENAME = win64
     SYSTEM_PATH = sys/win64
     }else {
+        QMAKE_CXXFLAGS += -std=c++0x
         macx{
             CODENAME = mac
             SYSTEM_PATH = sys/mac
